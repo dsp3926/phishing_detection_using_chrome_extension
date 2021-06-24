@@ -1,0 +1,20 @@
+{//specify basic metadata about your extension such as the name and version, 
+  // and can also specify aspects of your extension's functionality
+  // (such as background scripts, content scripts, and browser actions)
+  "manifest_version": 2,
+  "name": "Phishing Detection",
+  "version": "0.1",
+  "icons": { 
+        "16": "logo.jpg",
+        "48": "logo.jpg",
+        "128": "logo.jpg" 
+   },
+
+  "background": { "scripts": ["background.js"] },
+
+  "content_scripts": [ { "matches": [ "<all_urls>" ],
+
+  "js": ["jquery-3.1.1.min.js","content.js"]
+      }
+   ]
+}
